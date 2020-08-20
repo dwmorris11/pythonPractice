@@ -43,3 +43,45 @@ length = len(student_grades)
 mean = mysum / length
 print(mean)
 
+# dictionaries
+student_grades = {
+  "Mary": 9.1,
+  "Sim": 8.8,
+  "John": 7.5
+  }
+
+dir(dict)
+student_grades.values()
+student_grades.keys()
+
+#tuples (immutable)
+color_codes = ('5', 123)
+
+monday_temperatures = [9.1, 8.8, 7.5]
+monday_temperatures.append(8.1)
+monday_temperatures.index(8.8)
+
+seconds = [1.2323442655, 1.4534345567, 1.023458894, 1.10001399445]
+seconds.pop(1)
+
+# python slice, last one is not included
+monday_temperatures[0:2]
+# shorthand
+monday_temperatures[:2]
+# to the last item of list
+monday_temperatures[2:]
+# use negative numbers to count from right
+monday_temperatures[-2]
+# negative slicing
+monday_temperatures[-2:]
+monday_temperatures[-4:-2]
+
+mystring = 'hello'
+mystring[1]
+mystring[-1]
+mystring[:3]
+monday_temperatures = ['hello', 1, 2, 3]
+# return 'e'
+monday_temperatures[0][1]
+
+
