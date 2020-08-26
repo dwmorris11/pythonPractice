@@ -84,4 +84,78 @@ monday_temperatures = ['hello', 1, 2, 3]
 # return 'e'
 monday_temperatures[0][1]
 
+# function definition
+def mean(mylist):
+  the_mean = sum(mylist) / len(mylist)
+  return the_mean
 
+print(mean([1, 4, 5]))
+
+# conditionals (can use and and or as well)
+def newMean(value):
+  if type(value) == dict:
+    the_mean = sum(value.values()) / len(value)
+  else:
+    the_mean = sum(value) / len(value)
+
+  return the_mean
+
+  # isinstance(value, type) is recommended for checking type
+
+  # returns only numbers of an input with strings and numbers
+def only_numbers(lst):
+  return [val for val in lst if not isinstance(val, str)]
+
+def only_positive(lst):
+  return [i for i in lst if i > 0]
+
+# move the for loop to the end when using list comprehension and else statements
+def zero_not_strings(lst):
+    return [i if not isinstance(i, str) else 0 for i in lst]
+
+def string_to_float_sum(lst):
+    return sum([float(i) for i in lst])
+
+def to_upper(*args):
+    return sorted(list([i.upper() for i in args]))
+
+# reading a file in python
+myfile = open("test.txt")
+print(myfile.read())
+myfile.close()
+
+# open file with 'with' context manager
+# with context manager automatically uses the close method
+with open("text.txt") as myfile:
+    content = myfile.read()
+print(myfile)
+
+# writing a file
+with open("newTest.txt", "w") as myfile:
+  myfile.write("tomato\ngarlic")
+
+# printing the first 90 chars
+with open("bear.txt") as file:
+    content = file.read()
+print(content[:90])
+
+def count_chars(char, fp):
+    summation = 0
+    with open(fp) as file:
+        content = file.read()
+    for i in content:
+        if i == char:
+            summation = summation + 1
+    return summation
+
+def foo(character, filepath="bear.txt"):
+    file = open(filepath)
+    content = file.read()
+    return content.count(character)
+
+with open("bear.txt") as rd_file:
+    content = rd_file.read()
+content = content[:90]
+
+with open("first.txt", "w") as wr_file:
+    wr_file.write(content)
