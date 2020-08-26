@@ -159,3 +159,15 @@ content = content[:90]
 
 with open("first.txt", "w") as wr_file:
     wr_file.write(content)
+
+with open("bear1.txt") as file1:
+    content = file1.read()
+with open("bear2.txt", "a") as file2:
+    file2.write(content)
+
+with open("data.txt", 'a+') as file:
+    file.seek(0)
+    content = file.read()
+    file.seek(0)
+    file.write(content)
+    file.write(content)
