@@ -4,6 +4,11 @@ import json
 data = json.load(open("data.json"))
 
 def lookup(word):
-  return data[word]
+  word = word.lower()
+  if word in data:
+      return data[word]
+  else:
+      return "Word not found."
 
-print(lookup('rain'))
+word = input("Enter word: ")
+print(lookup(word))
